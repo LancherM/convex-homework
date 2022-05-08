@@ -43,7 +43,6 @@ class neuralNetwork:
                                         numpy.transpose(hidden_outputs))
         self.wih += self.lr * numpy.dot((hidden_errors * hidden_outputs * (1 - hidden_outputs)),
                                         numpy.transpose(inputs))
-
         pass
 
     # 查询神经网络
@@ -61,3 +60,4 @@ class neuralNetwork:
 
 if __name__ == '__main__':
     n = neuralNetwork(input_nodes, hidden_nodes, output_nodes, learning_rate)
+    print(n)
